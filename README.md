@@ -17,8 +17,9 @@ Spring MVC notebook
 使用方法同[Spring](https://github.com/Leekinghou/Spring)的使用方法教程
 
 ## 目录
-
-# 初识
+- s[01](#SpringMVC项目初始化)SpringMVC项目基本配置、各个xml书写
+- s[02](#URLMapping映射)URLMapping映射、前后端变量注入
+# SpringMVC项目初始化
 MVC是一种架构模式
 ![](https://gitee.com/leekinghou/image/raw/master/img/20220226110238.png)
 核心是Controller控制器，用于处理请求，产生响应  
@@ -116,4 +117,13 @@ public class TestController {
 ![](https://gitee.com/leekinghou/image/raw/master/img/1645871292034.png)
 
 
-
+# URLMapping映射
+前端变量名和后端变量名不一致时的映射方法
+```java
+@GetMapping("/g")
+@ResponseBody
+public String getMapping(@RequestParam("manager_name") String managerName){
+    System.out.println("manager:" + managerName);
+    return "This is a get method";
+}
+```

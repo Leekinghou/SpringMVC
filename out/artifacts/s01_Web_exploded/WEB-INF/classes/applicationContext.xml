@@ -7,7 +7,6 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/mvc
         https://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
-
     <!--
     context:component-scan 标签作用：
     在Spring IoC初始化过程中，自动创建并且管理com.springmvc及子包
@@ -22,5 +21,4 @@
     <mvc:annotation-driven/>
     <!--  将图片/JS/CSS等静态资源排除在外(不被DispatcherServlet拦截)，可以提高效率  -->
     <mvc:default-servlet-handler/>
-
 </beans>
