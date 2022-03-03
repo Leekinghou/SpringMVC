@@ -10,6 +10,9 @@
         <module name="s01" />
         <module name="s04" />
         <module name="s03" />
+        <module name="s06" />
+        <module name="s05" />
+        <module name="s07" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.4">
@@ -18,6 +21,9 @@
       <module name="s02 (1)" target="1.5" />
       <module name="s03" target="1.5" />
       <module name="s04" target="1.5" />
+      <module name="s05" target="1.5" />
+      <module name="s06" target="8" />
+      <module name="s07" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

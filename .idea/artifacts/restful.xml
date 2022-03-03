@@ -1,0 +1,35 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="restful">
+    <output-path>$PROJECT_DIR$/out/artifacts/restful</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="restful/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="s07" />
+          <element id="module-output" name="s06" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.2.19.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.2.19.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.2.19.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.2.19.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.2.19.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.2.19.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.2.19.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:5.2.19.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.1.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.1.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.1.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.1.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.1.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.1.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.1.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:5.1.9.RELEASE" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.9" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.9" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.9" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

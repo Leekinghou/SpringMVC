@@ -17,10 +17,14 @@ Spring MVC notebook
 使用方法同[Spring](https://github.com/Leekinghou/Spring)的使用方法教程
 
 ## 目录
+### Spring MVC
 - [s01](#SpringMVC项目初始化)SpringMVC项目基本配置、各个xml书写
 - [s02](#URLMapping映射)URLMapping映射、前后端变量注入
 - [s03](#JavaBean方式实现对象注入)JavaBean方式实现对象注入
-- [s04](#实例实现SpringMVC) 接收表单数据（列表、集合方式）、关联对象赋值、日期类型转换、自定义转换器
+- [s04](#实例实现SpringMVC) 接收表单数据（列表、集合方式）、关联对象赋值、日期类型转换、自定义转换器、解决中文乱码问题
+
+### Restful风格
+- [s05](#Restful风格)Restful风格代码规范、实现一个Restful风格的web应用
 # SpringMVC项目初始化
 MVC是一种架构模式
 ![](https://gitee.com/leekinghou/image/raw/master/img/20220226110238.png)
@@ -291,3 +295,47 @@ public String apply(String name, String course, Date createTime){
     return "SUCCESS";
 }
 ```
+
+- 解决中文乱码问题  
+![](https://gitee.com/leekinghou/image/raw/master/img/20220302145520.png)
+- post方法乱码，修改web.xml：
+```xml
+<filter>
+        <filter-name>characterFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>characterFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+```
+- 解决响应中文乱码，修改applicationContext.xml
+```xml
+<!--  启用Spring MVC的注解开发模式  -->
+<mvc:annotation-driven conversion-service="conversionService">
+    <mvc:message-converters>
+        <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+            <property name="supportedMediaTypes">
+                <list>
+                    <value>text/html;charset=utf-8</value>
+                </list>
+            </property>
+        </bean>
+    </mvc:message-converters>
+</mvc:annotation-driven>
+```
+# Restful风格的java代码
+
+## 传统Web应用的问题
+![](https://gitee.com/leekinghou/image/raw/master/img/20220303100112.png)
+
+## Restful开发规范
+![](https://gitee.com/leekinghou/image/raw/master/img/20220303101537.png)
+
+## Restful命名示范
+![](https://gitee.com/leekinghou/image/raw/master/img/20220303101734.png)
+
