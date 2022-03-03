@@ -18,7 +18,18 @@
     -->
     <context:component-scan base-package="com.springmvc"/>
     <!--  启用Spring MVC的注解开发模式  -->
-    <mvc:annotation-driven conversion-service="conversionService"/>
+    <mvc:annotation-driven conversion-service="conversionService">
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>text/html;charset=utf-8</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
     <!--  将图片/JS/CSS等静态资源排除在外(不被DispatcherServlet拦截)，可以提高效率  -->
     <mvc:default-servlet-handler />
 

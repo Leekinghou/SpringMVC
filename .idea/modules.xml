@@ -7,6 +7,9 @@
       <module fileurl="file://$PROJECT_DIR$/s02/s02.iml" filepath="$PROJECT_DIR$/s02/s02.iml" />
       <module fileurl="file://$PROJECT_DIR$/s03/s03.iml" filepath="$PROJECT_DIR$/s03/s03.iml" />
       <module fileurl="file://$PROJECT_DIR$/s04/s04.iml" filepath="$PROJECT_DIR$/s04/s04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/s05/s05.iml" filepath="$PROJECT_DIR$/s05/s05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/s06/s06.iml" filepath="$PROJECT_DIR$/s06/s06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/restful/s07.iml" filepath="$PROJECT_DIR$/restful/s07.iml" />
     </modules>
   </component>
 </project>
